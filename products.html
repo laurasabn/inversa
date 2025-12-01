@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produtos — Inversa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"><img src="WhatsApp_Image_2025-11-25_at_16.02.52-removebg-preview.png" alt="Inversa"></div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">Sobre</a>
+      <a href="products.html" class="active">Produtos</a>
+      <a href="contact.html">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <button id="cartBtn4" class="icon-btn">Carrinho (<span id="cartCount4">0</span>)</button>
+      <button id="loginBtn4" class="btn">Entrar / Criar conta</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Produtos</h1>
+
+    <div class="product-tabs">
+      <button class="prod-tab active" data-tab="camisetas">Camisetas</button>
+      <button class="prod-tab" data-tab="moletons">Moletons</button>
+      <button class="prod-tab" data-tab="acessorios">Acessórios</button>
+      <button class="prod-tab" data-tab="edicoes">Edições</button>
+    </div>
+
+    <div class="tab-content" id="camisetas">
+      <div class="products-grid" id="grid-camisetas"></div>
+    </div>
+
+    <div class="tab-content hidden" id="moletons">
+      <div class="products-grid" id="grid-moletons"></div>
+    </div>
+
+    <div class="tab-content hidden" id="acessorios">
+      <div class="products-grid" id="grid-acessorios"></div>
+    </div>
+
+    <div class="tab-content hidden" id="edicoes">
+      <div class="products-grid" id="grid-edicoes"></div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year4">2025</span> Inversa — Streetwear</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

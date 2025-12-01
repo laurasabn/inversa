@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato — Inversa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"><img src="WhatsApp_Image_2025-11-25_at_16.02.52-removebg-preview.png" alt="Inversa"></div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">Sobre</a>
+      <a href="products.html">Produtos</a>
+      <a href="contact.html" class="active">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <button id="cartBtn3" class="icon-btn">Carrinho (<span id="cartCount3">0</span>)</button>
+      <button id="loginBtn3" class="btn">Entrar / Criar conta</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contato</h1>
+    <ul class="contact-list">
+      <li>Email: <a href="mailto:contato@inversa.com">contato@inversa.com</a></li>
+      <li>Telefone: <a href="tel:+551199999999">+55 (11) 9 9999-9999</a></li>
+      <li>Instagram: <a href="https://instagram.com/inversa" target="_blank">@inversa</a></li>
+    </ul>
+
+    <section class="complaint">
+      <h2>Reclamações / Suporte</h2>
+      <form id="complaintForm">
+        <label>Nome<input type="text" id="compName" required></label>
+        <label>Email<input type="email" id="compEmail" required></label>
+        <label>Assunto<input type="text" id="compSubject" required></label>
+        <label>Mensagem<textarea id="compMessage" required></textarea></label>
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+      <div id="compMessageBox"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year3">2025</span> Inversa — Streetwear</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
