@@ -1,59 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Produtos — Inversa</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos - Inversa</title>
+  <link rel="stylesheet" href="produtos.css">
 </head>
 <body>
-  <!-- Teste alteração -->
-  <header class="site-header">
-    <div class="logo"><img src="logo_e-removebg-preview.png" alt="Inversa"></div>
-    <nav class="main-nav">
+
+  <!-- HEADER -->
+  <header class="topo">
+    <img src="logo.png" class="logo">
+    <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">Sobre</a>
-      <a href="products.html" class="active">Produtos</a>
-      <a href="contact.html">Contato</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="produtos.html" class="ativo">Produtos</a>
+      <a href="contato.html">Contato</a>
     </nav>
-    <div class="header-actions">
-      <button id="cartBtn4" class="icon-btn">Carrinho (<span id="cartCount4">0</span>)</button>
-      <button id="loginBtn4" class="btn">Entrar / Criar conta</button>
-    </div>
   </header>
 
-  <main class="container">
-    <h1>Produtos</h1>
+  <section class="produtos-section">
+    <h1 class="prod-title">Nossos Produtos</h1>
+    <p class="prod-sub">Escolha uma categoria para explorar</p>
 
-    <div class="product-tabs">
-      <button class="prod-tab active" data-tab="camisetas">Camisetas</button>
-      <button class="prod-tab" data-tab="moletons">Moletons</button>
-      <button class="prod-tab" data-tab="acessorios">Acessórios</button>
-      <button class="prod-tab" data-tab="edicoes">Edições</button>
+    <!-- ABAS -->
+    <div class="tabs">
+      <button class="tab active" data-tab="camisetas">Camisetas</button>
+      <button class="tab" data-tab="calcas">Calças</button>
+      <button class="tab" data-tab="moletons">Moletons</button>
+      <button class="tab" data-tab="acessorios">Acessórios</button>
     </div>
 
-    <div class="tab-content" id="camisetas">
-      <div class="products-grid" id="grid-camisetas"></div>
+    <!-- CONTEÚDO DAS ABAS -->
+    <div class="tab-content active" id="camisetas">
+      <div class="grid">
+        <div class="produto">
+          <img src="img/prod1.jpg">
+          <h3>Camiseta Street Inversa</h3>
+          <span>R$ 129,90</span>
+          <button class="btn">Adicionar ao carrinho</button>
+        </div>
+        <div class="produto">
+          <img src="img/prod2.jpg">
+          <h3>Camiseta Oversized</h3>
+          <span>R$ 149,90</span>
+          <button class="btn">Adicionar ao carrinho</button>
+        </div>
+      </div>
     </div>
 
-    <div class="tab-content hidden" id="moletons">
-      <div class="products-grid" id="grid-moletons"></div>
+    <div class="tab-content" id="calcas">
+      <div class="grid">
+        <div class="produto">
+          <img src="img/calca1.jpg">
+          <h3>Calça Cargo Preta</h3>
+          <span>R$ 199,90</span>
+          <button class="btn">Adicionar ao carrinho</button>
+        </div>
+      </div>
     </div>
 
-    <div class="tab-content hidden" id="acessorios">
-      <div class="products-grid" id="grid-acessorios"></div>
+    <div class="tab-content" id="moletons">
+      <div class="grid">
+        <div class="produto">
+          <img src="img/moletom1.jpg">
+          <h3>Moletom Inversa</h3>
+          <span>R$ 249,90</span>
+          <button class="btn">Adicionar ao carrinho</button>
+        </div>
+      </div>
     </div>
 
-    <div class="tab-content hidden" id="edicoes">
-      <div class="products-grid" id="grid-edicoes"></div>
+    <div class="tab-content" id="acessorios">
+      <div class="grid">
+        <div class="produto">
+          <img src="img/aces1.jpg">
+          <h3>Boné Street</h3>
+          <span>R$ 89,90</span>
+          <button class="btn">Adicionar ao carrinho</button>
+        </div>
+      </div>
     </div>
 
-  </main>
+  </section>
 
-  <footer class="site-footer">
-    <p>© <span id="year4">2025</span> Inversa — Streetwear</p>
-  </footer>
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
 
-  <script src="scripts.js"></script>
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        contents.forEach(c => c.classList.remove("active"));
+        document.getElementById(tab.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
+
 </body>
 </html>

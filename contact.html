@@ -6,46 +6,64 @@
   <title>Contato — Inversa</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="logo"><img src="logo_e-removebg-preview.png" alt="Inversa"></div>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">Sobre</a>
-      <a href="products.html">Produtos</a>
-      <a href="contact.html" class="active">Contato</a>
-    </nav>
-    <div class="header-actions">
-      <button id="cartBtn3" class="icon-btn">Carrinho (<span id="cartCount3">0</span>)</button>
-      <button id="loginBtn3" class="btn">Entrar / Criar conta</button>
+
+<header class="site-header">
+  <div class="logo"><img src="logo_e-removebg-preview.png" alt="Inversa"></div>
+
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">Sobre</a>
+    <a href="products.html">Produtos</a>
+    <a href="contact.html" class="active">Contato</a>
+  </nav>
+</header>
+
+<main class="container contact-page">
+
+  <h1 class="contact-title">Entre em Contato</h1>
+  <p class="contact-sub">Fale com a Inversa, estamos aqui para ouvir você.</p>
+
+  <section class="contact-grid">
+
+    <!-- Informações -->
+    <div class="contact-info">
+      <h2>Informações</h2>
+      <p><strong>Email:</strong> oficial.inversa@gmail.com</p>
+      <p><strong>WhatsApp:</strong> (21) 97884-1691</p>
+      <p><strong>Instagram:</strong> @inversa.wear</p>
     </div>
-  </header>
 
-  <main class="container">
-    <h1>Contato</h1>
-    <ul class="contact-list">
-      <li>Email: <a href="mailto:contato@inversa.com">contato@inversa.com</a></li>
-      <li>Telefone: <a href="tel:+551199999999">+55 (11) 9 9999-9999</a></li>
-      <li>Instagram: <a href="https://instagram.com/inversa" target="_blank">@inversa</a></li>
-    </ul>
+    <!-- Formulário -->
+    <form class="contact-form">
+      <h2>Mande sua mensagem</h2>
 
-    <section class="complaint">
-      <h2>Reclamações / Suporte</h2>
-      <form id="complaintForm">
-        <label>Nome<input type="text" id="compName" required></label>
-        <label>Email<input type="email" id="compEmail" required></label>
-        <label>Assunto<input type="text" id="compSubject" required></label>
-        <label>Mensagem<textarea id="compMessage" required></textarea></label>
-        <button class="btn" type="submit">Enviar</button>
-      </form>
-      <div id="compMessageBox"></div>
-    </section>
-  </main>
+      <label>
+        Nome
+        <input type="text" required>
+      </label>
 
-  <footer class="site-footer">
-    <p>© <span id="year3">2025</span> Inversa — Streetwear</p>
-  </footer>
+      <label>
+        Email
+        <input type="email" required>
+      </label>
 
-  <script src="scripts.js"></script>
+      <label>
+        Mensagem / Reclamação
+        <textarea rows="5" required></textarea>
+      </label>
+
+      <button class="btn large" type="submit">Enviar</button>
+    </form>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year2">2025</span> Inversa — Streetwear</p>
+</footer>
+
 </body>
 </html>
