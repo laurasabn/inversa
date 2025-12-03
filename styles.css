@@ -372,7 +372,7 @@ header nav a:hover {
 
 .about-header {
   text-align: center;
-  margin-top: 50px; /* dá espaço abaixo do header fixo */
+  margin-top: 30px; /* dá espaço abaixo do header fixo */
 }
 
 .about-header h1 {
