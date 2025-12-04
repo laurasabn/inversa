@@ -426,7 +426,7 @@ header nav a:hover {
 
 .about-card h3 {
   font-family: "Anton", sans-serif;
-  font-size: 1.8rem/;
+  font-size: 1.8rem;
   color: var(--purple);
   margin: 10px 0 6px;
 }
