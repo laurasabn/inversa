@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <img src="logo_e-removebg-preview.png" class="logo-img" alt="Inversa">
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">Sobre</a>
+            <a href="products.html">Produtos</a>
+            <a href="contact.html">Contato</a>
+        </nav>
+    </header>
+
+    <div class="product-page">
+
+        <div class="product-view">
+            <img id="product-img" src="" alt="">
+        </div>
+
+        <div class="product-info">
+            <h1 id="product-name"></h1>
+            <p id="product-desc"></p>
+
+            <h3>Cores disponíveis:</h3>
+            <div id="product-colors"></div>
+
+            <h3>Tamanhos disponíveis:</h3>
+            <div id="product-sizes"></div>
+
+            <h2 id="product-price"></h2>
+
+            <a href="products.html" class="btn large">Voltar</a>
+        </div>
+
+    </div>
+
+    <script>
+        // BANCO DE PRODUTOS ---------------------------
+        const products = {
+            "camiseta-oversized1": {
+                name: "Camiseta Oversized",
+                desc: "Modelagem premium, tecido macio e caimento street.",
+                price: "R$ 89,90",
+                img: "camisa1 atras.jpeg",
+                colors: ["Branco"],
+                sizes: ["P", "M", "G", "GG"]
+            },
+
+            "camiseta-oversized2": {
+                name: "Camiseta Oversized",
+                desc: "Essencial no guarda-roupa. Conforto premium em qualquer fit.",
+                price: "R$ 89,90",
+                img: "camisa2 atras.jpeg",
+                colors: ["Branco"],
+                sizes: ["P", "M", "G", "GG"]
+            },
+
+            "camiseta-oversized3": {
+                name: "Camiseta Oversized",
+                desc: "Street na atitude, leveza no toque. Simplesmente Inversa.",
+                price: "R$ 89,90",
+                img: "camisa3 atras.jpeg",
+                colors: ["Branco"],
+                sizes: ["P", "M", "G", "GG"]
+            },
+
+            "moletom-branco": {
+                name: "Moletom Street — Branco",
+                desc: "Macio, estiloso e perfeito para qualquer clima.",
+                price: "R$ 159,90",
+                img: "moletom branco.jpeg",
+                colors: ["Branco"],
+                sizes: ["P", "M", "G", "GG"]
+            },
+
+            "moletom-preto": {
+                name: "Moletom Street — Preto",
+                desc: "O básico que nunca é comum. Forte e urbano.",
+                price: "R$ 159,90",
+                img: "moletom preto.jpeg",
+                colors: ["Preto"],
+                sizes: ["P", "M", "G", "GG"]
+            },
+
+            "caneca-inversa": {
+                name: "Caneca Inversa",
+                desc: "Pra começar o dia no mood certo: estilo até no primeiro gole.",
+                price: "R$ 39,90",
+                img: "caneca.jpeg",
+                colors: ["Preto"],
+                sizes: ["Único"]
+            },
+
+
+            "meia-inversa": {
+                name: "Meia Inversa",
+                desc: "Nem básica, nem comum. A meia que fecha com qualquer drip.",
+                price: "R$ 49,90",
+                img: "meia roxa.jpeg",
+                colors: [ "Branco", "Roxo"],
+                sizes: ["P", "M", "G", "GG"]
+            },
+
+
+            "caderno-inversa": {
+                name: "Caderno Inversa",
+                desc: "Anote suas ideias com estilo — minimalista, urbano e versátil.",
+                price: "R$ 49,90",
+                img: "caderno fechado.jpeg",
+                colors: ["Roxo"],
+                sizes: ["Único"]
+            },
+
+            "bone-star": {
+                name: "Boné Star",
+                desc: "Streetwear autêntico para elevar seu estilo.",
+                price: "R$ 59,90",
+                img: "bone.jpeg",
+                colors: [ "Branco"],
+                sizes: ["Único"]
+            }
+
+        };
+
+        // PEGAR ID DA URL ----------------------------
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        const product = products[id];
+
+        // PREENCHER A PÁGINA -------------------------
+        document.getElementById("product-img").src = product.img;
+        document.getElementById("product-name").textContent = product.name;
+        document.getElementById("product-desc").textContent = product.desc;
+        document.getElementById("product-price").textContent = product.price;
+
+        document.getElementById("product-colors").innerHTML =
+            product.colors.map(color => `<span class="color-tag">${color}</span>`).join("");
+
+        document.getElementById("product-sizes").innerHTML =
+            product.sizes.map(size => `<span class="size-tag">${size}</span>`).join("");
+
+    </script>
+
+</body>
+</html>

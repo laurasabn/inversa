@@ -1,52 +1,212 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos – Inversa</title>
-    <link rel="stylesheet" href="products.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Produtos - Inversa</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-    <div class="logo">INVERSA</div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="produtos.html" class="ativo">Produtos</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
-
-<section class="produtos-container">
-    <h1>Nossos Produtos</h1>
-
-    <div class="grade-produtos">
-
-        <div class="produto">
-            <img src="https://via.placeholder.com/250" alt="Produto">
-            <h3>Camiseta Oversized</h3>
-            <p>Peça premium, tecido confortável.</p>
-            <button>Ver mais</button>
+ 
+    <header class="site-header">
+        <div class="logo">
+            <img src="logo_e-removebg-preview.png" class="logo-img" alt="Inversa">
         </div>
 
-        <div class="produto">
-            <img src="https://via.placeholder.com/250" alt="Produto">
-            <h3>Moletom Street</h3>
-            <p>Quente, estiloso e durável.</p>
-            <button>Ver mais</button>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">Sobre</a>
+            <a class="active" href="products.html">Produtos</a>
+            <a href="contact.html">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container" style="margin-top: 90px;">
+        
+        <!-- HEADER DA PÁGINA -->
+        <div class="about-header">
+            <h1>PRODUTOS</h1>
+            <p>Escolha entre nossas categorias e descubra o melhor do estilo Inversa.</p>
         </div>
 
-        <div class="produto">
-            <img src="https://via.placeholder.com/250" alt="Produto">
-            <h3>Calça Cargo</h3>
-            <p>Perfeita para o dia a dia.</p>
-            <button>Ver mais</button>
+        <!-- TABS DE CATEGORIAS -->
+        <div class="product-tabs">
+            <button class="prod-tab active">Camisetas</button>
+            <button class="prod-tab">Acessórios</button>
+            <button class="prod-tab">Objetos</button>
+            <button class="prod-tab">Moletons</button>
+        </div>
+
+        <!-- GRID DE PRODUTOS -->
+        <div class="products-grid">
+
+            <!-- CARD 1 -->
+            <div class="product-card" data-category="Camisetas">
+                <div class="img-box">
+                    <img src="camisa1 atras.jpeg" class="img-main" alt="">
+                    <img src="camisa1 frentee.jpeg" class="img-hover" alt="">
+                </div>                
+                <h4>Camiseta Oversized</h4>
+                <p>Tecido premium — modelagem unissex.</p>
+
+                <div class="cart-foot">
+                    <span>R$ 89,90</span>
+                    <a href="product.html?id=camiseta-oversized1" class="btn">Ver mais</a>
+                </div>
+            </div>
+
+            <!-- CARD 1.2 -->
+            <div class="product-card" data-category="Camisetas">
+                <div class="img-box">
+                    <img src="camisa2 atras.jpeg" class="img-main" alt="">
+                    <img src="camisa2 frente.jpeg" class="img-hover" alt="">
+                </div>                
+                <h4>Camiseta Oversized</h4>
+                <p>Tecido premium — modelagem unissex.</p>
+
+                <div class="cart-foot">
+                    <span>R$ 89,90</span>
+                    <a href="product.html?id=camiseta-oversized2" class="btn">Ver mais</a>
+                </div>
+            </div>
+
+            <!-- CARD 1.3 -->
+            <div class="product-card" data-category="Camisetas">
+                <div class="img-box">
+                    <img src="camisa3 atras.jpeg" class="img-main" alt="">
+                    <img src="camisa3 frente.jpeg" class="img-hover" alt="">
+                </div>                
+                <h4>Camiseta Oversized</h4>
+                <p>Tecido premium — modelagem unissex.</p>
+
+                <div class="cart-foot">
+                    <span>R$ 89,90</span>
+                    <a href="product.html?id=camiseta-oversized3" class="btn">Ver mais</a>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="product-card" data-category="Moletons">
+                <div class="img-box">
+                    <img src="moletom branco.jpeg" class="img-main" alt="">
+                    <img src="moletom branco.jpeg" class="img-hover" alt="">
+                </div>   
+                <h4>Moletom Street Inversa</h4>
+                <p>Moletom branco Inversa — o clássico que fecha com qualquer fit.</p>
+
+                <div class="cart-foot">
+                    <span>R$ 159,90</span>
+                    <a href="product.html?id=moletom-branco" class="btn">Ver mais</a>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="product-card" data-category="Acessórios">
+                <div class="img-box">
+                    <img src="bone.jpeg" class="img-main" alt="">
+                    <img src="bone.jpeg" class="img-hover" alt="">
+                </div>                
+                <h4>Boné Star</h4>
+                <p>Perfeito para o lifestyle street.</p>
+
+                <div class="cart-foot">
+                    <span>R$ 59,90</span>
+                    <a href="product.html?id=bone-star" class="btn">Ver mais</a>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="product-card" data-category="Objetos">
+                <div class="img-box">
+                    <img src="caderno fechado.jpeg" class="img-main" alt="">
+                    <img src="caderno aberto.jpeg" class="img-hover" alt="">
+                </div>                
+                <h4>Caderno Inversa</h4>
+                <p>Organização + estilo para o dia a dia.</p>
+
+                <div class="cart-foot">
+                    <span>R$ 49,90</span>
+                    <a href="product.html?id=caderno-inversa" class="btn">Ver mais</a>
+                </div>
+            </div>
+
+           <!-- CARD 5 -->
+            <div class="product-card" data-category="Objetos">
+                <div class="img-box">
+                     <img src="caneca.jpeg" class="img-main">
+                    <img src="caneca.jpeg" class="img-hover">
+                </div>
+                <h4>Caneca Inversa</h4>
+                <p>Design exclusivo — estilo urbano.</p>
+
+                <div class="cart-foot">
+                    <span>R$ 39,90</span>
+                    <a href="product.html?id=caneca-inversa" class="btn">Ver mais</a>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="product-card" data-category="Moletons">
+                <div class="img-box">
+                    <img src="moletom preto.jpeg" class="img-main" alt="">
+                    <img src="moletom preto.jpeg" class="img-hover" alt="">
+                </div>   
+                <h4>Moletom Street Inversa</h4>
+                <p>O básico que nunca é comum. Preto, forte e sempre street.</p>
+
+                <div class="cart-foot">
+                    <span>R$ 159,90</span>
+                    <a href="product.html?id=moletom-preto" class="btn">Ver mais</a>
+                </div>
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="product-card" data-category="Acessórios">
+                <div class="img-box">
+                    <img src="meia roxa.jpeg" class="img-main" alt="">
+                    <img src="meia branca.jpeg" class="img-hover" alt="">
+                </div>   
+                <h4>Meia Inversa</h4>
+                <p>Nem básica, nem comum. Única e ponto.</p>
+
+                <div class="cart-foot">
+                    <span>R$49,90</span>
+                    <a href="product.html?id=meia-inversa" class="btn">Ver mais</a>
+                    
+                </div>
+            </div>
         </div>
 
     </div>
-</section>
-
+    
+    <script>
+        const tabs = document.querySelectorAll('.prod-tab');
+        const cards = document.querySelectorAll('.product-card');
+    
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+    
+                // remover active
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+    
+                // esconder todos os cards
+                cards.forEach(card => card.style.display = "none");
+    
+                // mostrar de acordo com a categoria
+                const category = tab.textContent.trim();
+    
+                cards.forEach(card => {
+                    if (card.dataset.category === category) {
+                        card.style.display = "block";
+                    }
+                });
+    
+            });
+        });
+    </script>
+    
+    
 </body>
 </html>
